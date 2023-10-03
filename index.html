@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Товары и точка</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="catalogLogo">
+            <img src="img/Каталог.svg" alt="Каталог" width="48px" height="48px">
+            <div class="logo">ТОВАРЫ И ТОЧКА</div>
+        </div>
+        <div class="search-wrap">
+            <div class="search">
+                <input type="text" id="search" placeholder="Я ищу...">
+                <img src="img/search.svg" alt="Поиск" width="24px" height="24px">
+            </div>
+        </div>
+        <div class="menu-ico">
+            <div class="profile">
+                <div class="profile-ico">
+                    <img src="img/profileIco.svg" alt="Профиль" width="28px" height="28px">
+                </div>
+                <div class="profile-text">
+                    Профиль
+                </div>
+            </div>
+
+            <div class="basket">
+                <div class="basket-ico">
+                    <img src="img/basketIco.svg" alt="Корзина" width="28px" height="28px">
+                </div>
+                <div class="basket-text">
+                    Корзина
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrap-border-radius">
+        <div class="top-radius"></div>
+    </div>
+    <main>
+        <div class="content">
+            <h1 class="basketHeader">Корзина</h1>
+            <div class="main-content-wrap-gap">
+                <div class="choiceProduct">
+                    <div class="topCheckbox">
+                        <label class="custom-checkbox">
+                            <input class="hidden-checkbox" type="checkbox">
+                            <div class="checkbox">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_7_621)">
+                                        <path
+                                            d="M0.5 10.1C0.5 8.41159 0.500389 7.17536 0.580085 6.19993C0.659303 5.23034 0.814384 4.56255 1.09946 4.00305C1.62677 2.96816 2.46816 2.12677 3.50305 1.59946C4.06255 1.31438 4.73034 1.1593 5.69993 1.08008C6.67536 1.00039 7.91159 1 9.6 1H12.4C14.0884 1 15.3246 1.00039 16.3001 1.08008C17.2697 1.1593 17.9374 1.31438 18.4969 1.59946C19.5318 2.12677 20.3732 2.96816 20.9005 4.00305C21.1856 4.56255 21.3407 5.23034 21.4199 6.19993C21.4996 7.17536 21.5 8.41159 21.5 10.1V12.9C21.5 14.5884 21.4996 15.8246 21.4199 16.8001C21.3407 17.7697 21.1856 18.4374 20.9005 18.9969C20.3732 20.0318 19.5318 20.8732 18.4969 21.4005C17.9374 21.6856 17.2697 21.8407 16.3001 21.9199C15.3246 21.9996 14.0884 22 12.4 22H9.6C7.91159 22 6.67536 21.9996 5.69993 21.9199C4.73034 21.8407 4.06255 21.6856 3.50305 21.4005C2.46816 20.8732 1.62677 20.0318 1.09946 18.9969C0.814384 18.4374 0.659303 17.7697 0.580085 16.8001C0.500389 15.8246 0.5 14.5884 0.5 12.9V10.1Z"
+                                            stroke="black" stroke-opacity="0.2" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_7_621">
+                                            <rect width="22" height="22" fill="white" transform="translate(0 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </label>
+                        <div class="textTopCheckbox">Выбрать все</div>
+                        <img src="img/arrow-up.svg" alt="Стрелка" width="20px" height="20px">
+                    </div>
+                    <div class="listChoicedProducts">
+                        <div class="choicedProduct">
+                            <div class="descriptionProduct">
+                                <div class="checkbox-img-product">
+                                    <div class="checkboxProduct">
+                                        <label class="custom-checkbox">
+                                            <input class="hidden-checkbox" type="checkbox">
+                                            <div class="checkbox">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23"
+                                                    viewBox="0 0 22 23" fill="none">
+                                                    <g clip-path="url(#clip0_7_621)">
+                                                        <path
+                                                            d="M0.5 10.1C0.5 8.41159 0.500389 7.17536 0.580085 6.19993C0.659303 5.23034 0.814384 4.56255 1.09946 4.00305C1.62677 2.96816 2.46816 2.12677 3.50305 1.59946C4.06255 1.31438 4.73034 1.1593 5.69993 1.08008C6.67536 1.00039 7.91159 1 9.6 1H12.4C14.0884 1 15.3246 1.00039 16.3001 1.08008C17.2697 1.1593 17.9374 1.31438 18.4969 1.59946C19.5318 2.12677 20.3732 2.96816 20.9005 4.00305C21.1856 4.56255 21.3407 5.23034 21.4199 6.19993C21.4996 7.17536 21.5 8.41159 21.5 10.1V12.9C21.5 14.5884 21.4996 15.8246 21.4199 16.8001C21.3407 17.7697 21.1856 18.4374 20.9005 18.9969C20.3732 20.0318 19.5318 20.8732 18.4969 21.4005C17.9374 21.6856 17.2697 21.8407 16.3001 21.9199C15.3246 21.9996 14.0884 22 12.4 22H9.6C7.91159 22 6.67536 21.9996 5.69993 21.9199C4.73034 21.8407 4.06255 21.6856 3.50305 21.4005C2.46816 20.8732 1.62677 20.0318 1.09946 18.9969C0.814384 18.4374 0.659303 17.7697 0.580085 16.8001C0.500389 15.8246 0.5 14.5884 0.5 12.9V10.1Z"
+                                                            stroke="black" stroke-opacity="0.2" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7_621">
+                                                            <rect width="22" height="22" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="imgProductWrap">
+
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="productName">Футболка UZcotton мужская</div>
+                                    <div class="productCharacter">
+                                        <span>Цвет: белый</span>
+                                        <span>Размер: 56</span>
+                                    </div>
+                                    <div class="productInfo">
+                                        <div class="storage">
+                                            Коледино WB
+                                        </div>
+                                        <div class="seller">
+                                            <span>ООО Вайлдберриз</span>
+                                            <img src="img/attention.svg" alt="Информация о продавце" width="20px"
+                                                height="20px">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="priceProductWrap">
+                                <div class="counterWrap">
+                                    <div class="counter">
+                                        <div class="button-counter">−</div>
+                                        <div class="count">1</div>
+                                        <div class="button-counter">+</div>
+                                    </div>
+                                    <div class="balance">Осталось 2 шт.</div>
+                                    <div class="like-delete-wrap">
+                                        <img src="img/like.svg" alt="Избранное" width="20px" height="20px">
+                                        <img src="img/delete.svg" alt="Удалить" width="20px" height="20px">
+                                    </div>
+                                </div>
+                                <div class="priceWrap">
+                                    <div class="price-currency">
+                                        <span class="price">522</span>
+                                        <span class="currency">сом</span>
+                                    </div>
+                                    <div class="discountWrap">
+                                        <span class="discount">1051 сом</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choicedProduct">
+                            <div class="descriptionProduct">
+                                <div class="checkbox-img-product">
+                                    <div class="checkboxProduct">
+                                        <label class="custom-checkbox">
+                                            <input class="hidden-checkbox" type="checkbox">
+                                            <div class="checkbox">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23"
+                                                    viewBox="0 0 22 23" fill="none">
+                                                    <g clip-path="url(#clip0_7_621)">
+                                                        <path
+                                                            d="M0.5 10.1C0.5 8.41159 0.500389 7.17536 0.580085 6.19993C0.659303 5.23034 0.814384 4.56255 1.09946 4.00305C1.62677 2.96816 2.46816 2.12677 3.50305 1.59946C4.06255 1.31438 4.73034 1.1593 5.69993 1.08008C6.67536 1.00039 7.91159 1 9.6 1H12.4C14.0884 1 15.3246 1.00039 16.3001 1.08008C17.2697 1.1593 17.9374 1.31438 18.4969 1.59946C19.5318 2.12677 20.3732 2.96816 20.9005 4.00305C21.1856 4.56255 21.3407 5.23034 21.4199 6.19993C21.4996 7.17536 21.5 8.41159 21.5 10.1V12.9C21.5 14.5884 21.4996 15.8246 21.4199 16.8001C21.3407 17.7697 21.1856 18.4374 20.9005 18.9969C20.3732 20.0318 19.5318 20.8732 18.4969 21.4005C17.9374 21.6856 17.2697 21.8407 16.3001 21.9199C15.3246 21.9996 14.0884 22 12.4 22H9.6C7.91159 22 6.67536 21.9996 5.69993 21.9199C4.73034 21.8407 4.06255 21.6856 3.50305 21.4005C2.46816 20.8732 1.62677 20.0318 1.09946 18.9969C0.814384 18.4374 0.659303 17.7697 0.580085 16.8001C0.500389 15.8246 0.5 14.5884 0.5 12.9V10.1Z"
+                                                            stroke="black" stroke-opacity="0.2" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7_621">
+                                                            <rect width="22" height="22" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="imgProductWrap">
+
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="productName">Силиконовый чехол картхолдер (отверстия) для карт,
+                                        прозрачный кейс бампер на Apple iPhone XR, MobiSafe</div>
+                                    <div class="productCharacter">
+                                        <span>Цвет: прозрачный</span>
+
+                                    </div>
+                                    <div class="productInfo">
+                                        <div class="storage">
+                                            Коледино WB
+                                        </div>
+                                        <div class="seller">
+                                            <span>ООО Мегапрофстиль</span>
+                                            <img src="img/attention.svg" alt="Информация о продавце" width="20px"
+                                                height="20px">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="priceProductWrap">
+                                <div class="counterWrap">
+                                    <div class="counter">
+                                        <div class="button-counter">−</div>
+                                        <div class="count">200</div>
+                                        <div class="button-counter">+</div>
+                                    </div>
+                                    <div style="display:none;" class="balance">Осталось 2 шт.</div>
+                                    <div class="like-delete-wrap">
+                                        <img src="img/like.svg" alt="Избранное" width="20px" height="20px">
+                                        <img src="img/delete.svg" alt="Удалить" width="20px" height="20px">
+                                    </div>
+                                </div>
+                                <div class="priceWrap">
+                                    <div class="price-currency">
+                                        <span class="price">522</span>
+                                        <span class="currency">сом</span>
+                                    </div>
+                                    <div class="discountWrap">
+                                        <span class="discount">2 300 047 сом</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choicedProduct">
+                            <div class="descriptionProduct">
+                                <div class="checkbox-img-product">
+                                    <div class="checkboxProduct">
+                                        <label class="custom-checkbox">
+                                            <input class="hidden-checkbox" type="checkbox">
+                                            <div class="checkbox">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23"
+                                                    viewBox="0 0 22 23" fill="none">
+                                                    <g clip-path="url(#clip0_7_621)">
+                                                        <path
+                                                            d="M0.5 10.1C0.5 8.41159 0.500389 7.17536 0.580085 6.19993C0.659303 5.23034 0.814384 4.56255 1.09946 4.00305C1.62677 2.96816 2.46816 2.12677 3.50305 1.59946C4.06255 1.31438 4.73034 1.1593 5.69993 1.08008C6.67536 1.00039 7.91159 1 9.6 1H12.4C14.0884 1 15.3246 1.00039 16.3001 1.08008C17.2697 1.1593 17.9374 1.31438 18.4969 1.59946C19.5318 2.12677 20.3732 2.96816 20.9005 4.00305C21.1856 4.56255 21.3407 5.23034 21.4199 6.19993C21.4996 7.17536 21.5 8.41159 21.5 10.1V12.9C21.5 14.5884 21.4996 15.8246 21.4199 16.8001C21.3407 17.7697 21.1856 18.4374 20.9005 18.9969C20.3732 20.0318 19.5318 20.8732 18.4969 21.4005C17.9374 21.6856 17.2697 21.8407 16.3001 21.9199C15.3246 21.9996 14.0884 22 12.4 22H9.6C7.91159 22 6.67536 21.9996 5.69993 21.9199C4.73034 21.8407 4.06255 21.6856 3.50305 21.4005C2.46816 20.8732 1.62677 20.0318 1.09946 18.9969C0.814384 18.4374 0.659303 17.7697 0.580085 16.8001C0.500389 15.8246 0.5 14.5884 0.5 12.9V10.1Z"
+                                                            stroke="black" stroke-opacity="0.2" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_7_621">
+                                                            <rect width="22" height="22" fill="white"
+                                                                transform="translate(0 0.5)" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="imgProductWrap">
+
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="productName">Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                                        заточенные, шестигранные, <br> Faber-Castell </div>
+
+                                    <div class="productInfo">
+                                        <div class="storage">
+                                            Коледино WB
+                                        </div>
+                                        <div class="seller">
+                                            <span>ООО Вайлдберриз</span>
+                                            <img src="img/attention.svg" alt="Информация о продавце" width="20px"
+                                                height="20px">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="priceProductWrap">
+                                <div class="counterWrap">
+                                    <div class="counter">
+                                        <div class="button-counter">−</div>
+                                        <div class="count">2</div>
+                                        <div class="button-counter">+</div>
+                                    </div>
+                                    <div class="balance">Осталось 2 шт.</div>
+                                    <div class="like-delete-wrap">
+                                        <img src="img/like.svg" alt="Избранное" width="20px" height="20px">
+                                        <img src="img/delete.svg" alt="Удалить" width="20px" height="20px">
+                                    </div>
+                                </div>
+                                <div class="priceWrap">
+                                    <div class="price-currency">
+                                        <span class="price">494</span>
+                                        <span class="currency">сом</span>
+                                    </div>
+                                    <div class="discountWrap">
+                                        <span class="discount">950 сом</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="choiceProduct">
+                    <div class="textTopCheckboxAvailable">Отсутствуют · 3 товара</div>
+                    <div class="listAvailableProducts">
+                        <div class="choicedProduct">
+                            <div class="descriptionProduct">
+                                <div class="checkbox-img-product">
+                                    <div class="imgProductWrap">
+
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="productName">Футболка UZcotton мужская</div>
+                                    <div class="productCharacter">
+                                        <span>Цвет: белый</span>
+                                        <span>Размер: 56</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="priceProductWrap">
+                                <div class="counterWrap">
+                                    <div class="like-delete-wrap">
+                                        <img src="img/like.svg" alt="Избранное" width="20px" height="20px">
+                                        <img src="img/delete.svg" alt="Удалить" width="20px" height="20px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choicedProduct">
+                            <div class="descriptionProduct">
+                                <div class="checkbox-img-product">
+                                    <div class="imgProductWrap">
+
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="productName">Силиконовый чехол картхолдер (отверстия) для карт,
+                                        прозрачный кейс бампер на Apple iPhone XR, MobiSafe</div>
+                                    <div class="productCharacter">
+                                        <span>Цвет: прозрачный</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="priceProductWrap">
+                                <div class="counterWrap">
+                                    <div class="like-delete-wrap">
+                                        <img src="img/like.svg" alt="Избранное" width="20px" height="20px">
+                                        <img src="img/delete.svg" alt="Удалить" width="20px" height="20px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choicedProduct">
+                            <div class="descriptionProduct">
+                                <div class="checkbox-img-product">
+                                    <div class="imgProductWrap">
+
+                                    </div>
+                                </div>
+                                <div class="description">
+                                    <div class="productName">Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                                        заточенные, шестигранные, Faber-Castell </div>
+                                </div>
+                            </div>
+                            <div class="priceProductWrap">
+                                <div class="counterWrap">
+                                    <div class="like-delete-wrap">
+                                        <img src="img/like.svg" alt="Избранное" width="20px" height="20px">
+                                        <img src="img/delete.svg" alt="Удалить" width="20px" height="20px">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-pay-wrap-gap">
+                    <div class="delivery-wrap">
+                        <div class="delivery-header">
+                            <div class="delivery-header-text">
+                                Способ доставки
+                            </div>
+                            <div class="change-button">
+                                Изменить
+                            </div>
+                        </div>
+                        <div class="delivery-info-wrap">
+                            <div class="delivery-info-items-wrap">
+                                <div class="address-item">Пункт выдачи</div>
+                                <div class="delivery-cost-item">Стоимость доставки</div>
+                                <div class="delivery-date">5—6 февраля</div>
+                                <div class="delivery-date">7—8 февраля</div>
+                            </div>
+                            <div class="delivery-info-details-wrap">
+                                <div class="address-wrap">
+                                    <div class="address">Бишкек, улица Ахматбека Суюмбаева, 12/1</div>
+                                    <div class="address-info-wrap">
+                                        <div class="rating-wrap">
+                                            <div class="rating-img-wrap">
+                                                <img src="img/rating-rating-star-fill.svg" alt="Рейтинг" width="12px"
+                                                    height="12px">
+                                            </div>
+
+                                            <span class="rating">4.99</span>
+                                        </div>
+                                        <span class="hours-work">Ежедневно с 10 до 21</span>
+                                    </div>
+                                </div>
+                                <div class="cost">Бесплатно</div>
+                                <div class="product-group">
+                                    <div class="img-product-in-delivery-info">
+
+                                    </div>
+                                    <div class="img-product-in-delivery-info">
+
+                                    </div>
+                                    <div class="img-product-in-delivery-info">
+
+                                    </div>
+                                </div>
+                                <div class="product-group">
+                                    <div class="img-product-in-delivery-info">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-cancel-wrap">
+                            <div class="delivery-cancel">
+                                <img src="img/price-shipping.svg" alt="Обратная доставка" width="22px" height="22px">
+                                <div class="delivery-cancel-text-wrap">
+                                    <span class="delivery-cancel-text">Обратная доставка товаров на склад при
+                                        отказе —</span>
+                                    <span class="delivery-cancel-cost">бесплатно</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-method-wrap">
+                        <div class="payment-main">
+                            <div class="payment-header">
+                                <div class="payment-header-text">
+                                    Способ оплаты
+                                </div>
+                                <div class="change-button">
+                                    Изменить
+                                </div>
+                            </div>
+                            <div class="payment-carddata">
+                                <div class="carddata-wrap">
+                                    <div class="payment-system">
+                                        <img src="img/mir.svg" alt="Обратная доставка" width="30px" height="9.33px">
+                                    </div>
+                                    <div class="carddata">
+                                        <span class="numbercard">
+                                            1234 56•• •••• 1234
+                                        </span>
+                                        <span class="datecard">
+                                            01/30
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="payment-footer">
+                            Спишем оплату с карты при получении
+                        </div>
+                    </div>
+                    <div class="addressees-info-wrap">
+                        <div class="addressees-header">
+                            Получатель
+                        </div>
+                        <div class="addressees-main-info-wrap">
+                            <div class="nameAddressees-wrap">
+                                <div class="input-addressees">
+                                    <div class="label-placeholder"></div>
+                                    <input type="text" placeholder="Имя">
+                                    <div class="error-input-addressees"></div>
+                                </div>
+                                <div class="input-addressees">
+                                    <div class="label-placeholder"></div>
+                                    <input type="text" placeholder="Фамилия">
+                                    <div class="error-input-addressees"></div>
+                                </div>
+                            </div>
+                            <div class="nameAddressees-wrap">
+                                <div class="input-addressees">
+                                    <div class="label-placeholder"></div>
+                                    <input type="text" placeholder="Почта">
+                                    <div class="error-input-addressees"></div>
+                                </div>
+                                <div class="input-addressees">
+                                    <div class="label-placeholder">Телефон</div>
+                                    <input type="text" placeholder="Телефон" value="+7 988 123-45-67">
+                                    <div class="error-input-addressees"></div>
+                                </div>
+                                <div class="input-addressees">
+                                    <div class="label-placeholder"></div>
+                                    <input type="text" placeholder="ИНН">
+                                    <div class="error-input-addressees" style="color:black;">Для таможенного оформления</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="products-cost-wrap">
+                <div class="price-wrap">
+                    <div class="price-header">
+                        <span>
+                            Итого
+                        </span>
+                        <span class="price-all">
+                            2 101 063 <span>сом</span>
+                        </span>
+                    </div>
+                    <div class="price-main">
+                        <div class="price-item-wrap">
+                            <span>203 товара</span><span>2 302 048 сом</span>
+                        </div>
+                        <div class="price-item-wrap">
+                            <span>Скидка</span><span>−200 985 сом</span>
+                        </div>
+                        <div class="price-item-wrap">
+                            <span>Доставка</span><span>Бесплатно</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-delivery-wrap">
+                    <div class="delivery-endpoint-sidebar">
+                        <div class="delivery-endpoint-header-sidebar">
+                            <span class="delivery-endpoint-header-text">
+                                Доставка в пункт выдачи
+                            </span>
+                            <img src="img/pencil.svg" alt="Изменить" width="20px" height="20px">
+                        </div>
+                        <span class="delivery-endpoint-sidebar-address">
+                            Бишкек, улица Ахматбека Суюмбаева, 12/1
+                        </span>
+                        <div>
+                            <span class="delivery-endpoint-sidebar-date">
+                                5–8 фев
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <div class="delivery-cancel-info-sidebar">
+                        <img src="img/price-shipping.svg" alt="Изменить" width="22px" height="22px">
+                        <span class="delivery-cancel-text">
+                            Обратная доставка товаров <br>на склад при отказе — 
+                            <span class="delivery-cancel-cost">бесплатно</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="sidebar-payment-wrap">
+                    <div class="sidebar-payment-header-carddata-wrap">
+                        <div class="delivery-endpoint-header-sidebar">
+                            <span class="delivery-endpoint-header-text">
+                                Оплата картой
+                            </span>
+                            <img src="img/pencil.svg" alt="Изменить" width="20px" height="20px">
+                        </div>
+                        <div class="sidebar-carddata-wrap">
+                            <div class="sidebar-payment-method">
+                                <img src="img/mir.svg" alt="Изменить" width="30px" height="9.33px">
+                            </div>
+                            <span class="sidebar-carddata">
+                                1234 12•• •••• 1234
+                            </span>
+                        </div>
+                    </div>
+                    <div class="sidebar-moment-payment-wrap">
+                        <div class="sidebar-payment-checkbox-label-wrap">
+                            <label class="custom-checkbox">
+                                <input class="hidden-checkbox" type="checkbox">
+                                <div class="checkbox">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="23" viewBox="0 0 22 23"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_7_621)">
+                                            <path
+                                                d="M0.5 10.1C0.5 8.41159 0.500389 7.17536 0.580085 6.19993C0.659303 5.23034 0.814384 4.56255 1.09946 4.00305C1.62677 2.96816 2.46816 2.12677 3.50305 1.59946C4.06255 1.31438 4.73034 1.1593 5.69993 1.08008C6.67536 1.00039 7.91159 1 9.6 1H12.4C14.0884 1 15.3246 1.00039 16.3001 1.08008C17.2697 1.1593 17.9374 1.31438 18.4969 1.59946C19.5318 2.12677 20.3732 2.96816 20.9005 4.00305C21.1856 4.56255 21.3407 5.23034 21.4199 6.19993C21.4996 7.17536 21.5 8.41159 21.5 10.1V12.9C21.5 14.5884 21.4996 15.8246 21.4199 16.8001C21.3407 17.7697 21.1856 18.4374 20.9005 18.9969C20.3732 20.0318 19.5318 20.8732 18.4969 21.4005C17.9374 21.6856 17.2697 21.8407 16.3001 21.9199C15.3246 21.9996 14.0884 22 12.4 22H9.6C7.91159 22 6.67536 21.9996 5.69993 21.9199C4.73034 21.8407 4.06255 21.6856 3.50305 21.4005C2.46816 20.8732 1.62677 20.0318 1.09946 18.9969C0.814384 18.4374 0.659303 17.7697 0.580085 16.8001C0.500389 15.8246 0.5 14.5884 0.5 12.9V10.1Z"
+                                                stroke="black" stroke-opacity="0.2" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_7_621">
+                                                <rect width="22" height="22" fill="white" transform="translate(0 0.5)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </label>
+                            <span class="sidebar-checkbox-label">
+                                Списать оплату сразу
+                            </span>
+                        </div>
+                        <div class="payment-moment-info">
+                            Спишем оплату с карты при получении
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebar-button-wrap">
+                <div class="sidebar-button">
+                    Заказать
+                </div>
+                <div class="accept-rules-wrap">
+                    <img src="img/rules-checkbox.svg" alt="Изменить" width="13px" height="24px">
+                    <span class="rules-text">
+                        Соглашаюсь с <span style="text-decoration: underline;">правилами <br>пользования торговой площадкой</span> <br>и возврата
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="wrap-border-radius">
+        <div class="bottom-radius"></div>
+    </div>
+    <footer>
+        <div class="footer-text">© 2022 ООО «Товары и точка»</div>
+    </footer>
+</body>
+
+</html>
